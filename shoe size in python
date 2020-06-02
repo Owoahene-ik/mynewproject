@@ -1,0 +1,40 @@
+class Robot:
+    def __init__(self,size,dob,name,K):
+        self.size = size + "00"
+        self.age = int(dob)
+        self.name = name
+        self.K = ""
+        #self.country = country
+    def shoe_self(self):
+        #n = self.size 
+        g = self.size 
+        t = self.age
+        h = int(g) - t + 2020
+        f = str(h)
+        self.K = int(f[2:4])
+        print("Hello," + self.name )
+        print("Your age is {}".format(self.K))
+        #print(f[2:4])
+        #print("")
+    def level(self):
+        if self.K in range(1,31):
+            print("Your are in your very youthful age")
+        elif self.K in range(31,41):
+            print("your are hitting the pick of active youth")
+        elif self.K in range(41,51):
+            print("your need to start movivng towards retirement")
+        else:
+            print("Your must be on retirement enjoying the savings")
+
+
+fname = input("Enter your name: ")
+
+shoe_size=input("Enter your shoe size:  ")
+
+year = input("Enter your year of birth: ")
+
+r = Robot(shoe_size,year,fname,"")
+
+r.shoe_self()
+
+r.level()
